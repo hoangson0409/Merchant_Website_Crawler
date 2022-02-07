@@ -1,0 +1,9 @@
+ul {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 50rem;
+    padding: 1rem;
+}
+body {
+    background-color: 'green'
+}

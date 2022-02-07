@@ -1,0 +1,43 @@
+version: "3.3"
+   
+services:
+  db:
+    image: mysql:8.0.22
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: $MYSQL_ROOT_PASSWORD
+      MYSQL_DATABASE: $DB_NAME
+      MYSQL_USER: $DB_USER
+      MYSQL_PASSWORD: $DB_PASS
+    volumes:
+      - ./mysql/data:/var/lib/mysql
+      - ./mysql/config.d/pw.cnf:/etc/mysql/conf.d/pw.cnf
+  splash:
+    image: scrapinghub/splash:3.5.0
+    restart: always
+  app:
+    image: __IMAGE_NAME__:__IMAGE_TAG__
+    # image: spiderman:local
+    build:
+      context: .
+      dockerfile: cicd/Dockerfile
+    volumes:
+      - ./data/scrapyd:/data/scrapyd
+      - ./django_project:/django_project
+
+    environment:
+      - DB_ENGINE
+      - DB_PORT
+      - DB_HOST
+      - DB_NAME
+      - DB_USER
+      - DB_PASS
+      - AUTO_MIGRATION
+      - SPLASH_URL
+      - PWSCRAPY_PROJECT
+    ports:
+      - "8000:8000"
+      - "6800:6800"
+    depends_on:
+      - db

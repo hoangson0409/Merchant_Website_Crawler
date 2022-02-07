@@ -1,0 +1,111 @@
+stages:
+  - build
+  - migration
+  - deploy
+  - restart_worker
+  - rollback
+  - clean
+variables:
+  GCP_PROJECT_NAME: "pw-exodus"
+  ANSIBLE_DEPLOY: "true"
+  BG_DEPLOY: "true"
+  GCP_PROJECT_ZONE: "us-central1-a"
+  REGISTRY_PATH: "gcr.io/pw-exodus/bi"
+  NOTIFICATION: "false"
+  APP_ENV: "bi-stage"
+
+
+prod_build_image:
+  stage: build
+  variables:
+    # GIT_SUBMODULE_STRATEGY: recursive
+    NOTIFICATION: "true"
+    APP_DOMAIN: "spiderman.bi-stage.stuffio.com"
+  script:
+    - cp -fv .env.example .env
+    - sed -i "s/\s*=\s*/=/g" .env
+    - pwci build
+  only: &prod_branches
+    - /^master.*/
+  tags:
+    - gke-staging
+
+# prod_migration:
+#   stage: migration
+#   variables:
+#     NOTIFICATION: "true"
+#     APP_DOMAIN: "admin.fasterpay.com"
+#     JOB_TIMEOUT: 300s
+#   script:
+#     - cp -fv /opt/infra/app/k8s/manifest_templates/laravel_migration.job.tmpl.yaml cicd/migration.job.tmpl.yaml
+#     - cp -fv cicd/${APP_ENV}_vars.yaml cicd/vars.yaml
+#     - pwci run_gke_job migration
+#   only: *prod_branches
+#   tags:
+#     - fasterpay
+#   when: manual
+#   allow_failure: true
+
+prod_app_deploy:
+  stage: deploy
+  variables:
+    APP_DOMAIN: "spiderman.bi-stage.stuffio.com"
+    WORKLOAD_TYPE: deployment
+    WORKLOAD_NAME: spiderman-app
+    CONTAINER_NAME: spiderman-app
+  script:
+    - pwci rancher_workload_update_image
+  only: *prod_branches
+  tags:
+    - stage1t3
+  when: manual
+
+prod_celery_deploy:
+  stage: restart_worker
+  variables:
+    APP_DOMAIN: "spiderman.bi-stage.stuffio.com"
+    WORKLOAD_TYPE: deployment
+    WORKLOAD_NAME: spiderman-celery
+    CONTAINER_NAME: spiderman-celery
+  script:
+    - pwci rancher_workload_update_image
+  only: *prod_branches
+  tags:
+    - stage1t3
+
+prod_celery_beat_deploy:
+  stage: restart_worker
+  variables:
+    APP_DOMAIN: "spiderman.bi-stage.stuffio.com"
+    WORKLOAD_TYPE: deployment
+    WORKLOAD_NAME: spiderman-celery-beat
+    CONTAINER_NAME: spiderman-celery-beat
+  script:
+    - pwci rancher_workload_update_image
+  only: *prod_branches
+  tags:
+    - stage1t3
+
+# prod_rollback_gke:
+#   stage: rollback
+#   variables:
+#     NOTIFICATION: "true"
+#     APP_DOMAIN: "admin.fasterpay.com"
+#   script:
+#     - pwci rollback
+#   only: *prod_branches
+#   tags:
+#     - fasterpay
+#   when: manual
+
+# prod_green_deploys_delete:
+#   stage: clean
+#   variables:
+#     NOTIFICATION: "true"
+#     APP_DOMAIN: "admin.fasterpay.com"
+#   script:
+#     - pwci delete_green_deploy
+#   only: *prod_branches
+#   tags:
+#     - fasterpay
+#   when: manual

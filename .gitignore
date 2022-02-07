@@ -1,0 +1,10 @@
+.env
+__pycache__/
+mysql/data/
+django_project/scrapy_app/scrapy_app/twistd.pid
+django_project/scrapy_app/build/
+django_project/scrapy_app/scrapy_app/eggs/
+django_project/scrapy_app/project.egg-info/
+.idea/
+django_project/scrapy_app/scrapy_app/logs/
+

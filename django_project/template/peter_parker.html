@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+{% endblock %}
+
+
+{% block title %}
+APP1
+{% endblock %}
+
+{% block content %}
+    <h1>Insert domain to search in domain box</h1>
+    <p>Insert keywords to be filtered by in keyword box, separated by "," </p>
+
+    <form action="/main/crawl/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" value={{domain}}>Send to Crawl</button>
+    </form>
+
+{% endblock content %}
+

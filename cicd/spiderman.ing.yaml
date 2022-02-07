@@ -1,0 +1,29 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/whitelist-source-range: >
+      118.70.80.35, 222.252.14.111, 169.53.41.215, 119.81.171.30, 159.8.248.71,
+      209.58.172.164, 115.85.9.75, 221.153.190.152, 210.99.110.225, 194.156.251.226,
+      94.45.40.226, 95.67.107.202
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+  labels:
+    app: spiderman
+  name: spiderman
+  namespace: bi-stage
+spec:
+  rules:
+  - host: spiderman.bi-stage.stuffio.com
+    http:
+      paths:
+      - backend:
+          serviceName: spiderman-app
+          servicePort: 8000
+        path: /
+  tls:
+  - hosts:
+    - spiderman.bi-stage.stuffio.com
+    secretName: spiderman-tls

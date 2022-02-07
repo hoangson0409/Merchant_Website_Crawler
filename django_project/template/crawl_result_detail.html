@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+{% endblock %}
+
+
+{% block title %}
+Crawl Result Detail App 1
+{% endblock %}
+
+{% block content %}
+
+<!-- Following variables defined in views.crawl_result_details function -->
+<h1>Search Term: {{search_term}} </h1>
+
+<p><b> URL scanned:</b> {{url}}</p>
+<!--<p>{{url_id}}</p>-->
+<p><b>Scanned Time:</b> {{scan_time}} (UTC Time) </p>
+<p><b>Page Content:</b> <br> {{page_content}} </p>
+<!--<p>{{ screenshot_dir }} </p>-->
+
+<!-- ScreenShots -->
+{% with image_static=screenshot_dir %}
+    <img src="{% static image_static %}" alt="My image"/>
+{% endwith %}
+
+{% endblock content %}
+
+

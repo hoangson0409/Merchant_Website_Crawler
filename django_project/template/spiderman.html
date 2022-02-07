@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+{% endblock %}
+
+{% block title %}
+MAIN APPS
+{% endblock %}
+
+{% block content %}
+<h1> PAYMENTWALL WEB CRAWLER - MAIN APPLICATIONS </h1>
+
+<p>
+<a href="{% url 'peter_parker' %}"> APP 1 (Crawling child pages of a Single Domain) </a>
+</p>
+<p>
+<a href="{% url 'crawl_result1' %}"> Result Lists 1 </a>
+</p>
+
+<p>
+<a href="{% url 'mary_janes' %}"> APP 2 (Crawling child pages of PW/FP Merchants) </a>
+</p>
+<p>
+<a href="{% url 'crawl_result2' %}"> Result Lists 2 </a>
+</p>
+{% endblock content %}
+
+
+

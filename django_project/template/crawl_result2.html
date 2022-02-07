@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+
+{% block title %}
+Crawl Results App 2
+{% endblock %}
+{% block css_files %}
+{% endblock %}
+
+
+{% block content %}
+<h1>Crawl Result Application 2 (Paymentwall/FasterPay merchants) </h1>
+    <ul>
+        {% for outputmary in page_obj %}
+
+        <li><b>Product - [Merchant ID] - Merchant Name: </b> {{outputmary.pw_product|upper}} - [{{outputmary.merchant_id}}]-{{outputmary.merchant_name}}
+            <a href="{% url 'crawl_result_detail2' outputmary.output_id %}">More Details</a>
+        </li>
+        <b>Keywords - Logic: </b> {{outputmary.input_id.keywords}} - {{outputmary.input_id.keyword_logic}} <br>
+        <b>URL:</b> {{outputmary.url}} <br>
+        <b>Scanned Time:</b> {{outputmary.scan_time}} (UTC Time) >
+
+        {% endfor %}
+    </ul>
+
+<!--Pagination Bottom-->
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1">&laquo; first</a>
+            <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">next</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+{% endblock content %}
+
+

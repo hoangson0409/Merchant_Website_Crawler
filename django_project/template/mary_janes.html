@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+{% endblock %}
+
+
+{% block title %}
+APP2
+{% endblock %}
+
+{% block content %}
+    <h1>Input to select required condtions</h1>
+    <p> For Scheduled-Task, take value of field id_for_argument and go to Admin Page to create new Periodic Task </p>
+
+    <form action="/main/crawl_all/" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" value={{domain}}>Send to Crawl</button>
+    </form>
+
+{% endblock content %}
+

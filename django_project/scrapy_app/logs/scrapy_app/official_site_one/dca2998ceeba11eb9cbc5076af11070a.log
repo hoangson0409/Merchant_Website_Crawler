@@ -1,0 +1,453 @@
+2021-07-27 16:13:18 [scrapy.utils.log] INFO: Scrapy 2.5.0 started (bot: scrapy_app)
+2021-07-27 16:13:18 [scrapy.utils.log] INFO: Versions: lxml 4.3.2.0, libxml2 2.9.5, cssselect 1.1.0, parsel 1.6.0, w3lib 1.22.0, Twisted 21.2.0, Python 3.7.7 (default, May  6 2020, 11:45:54) [MSC v.1916 64 bit (AMD64)], pyOpenSSL 20.0.1 (OpenSSL 1.1.1g  21 Apr 2020), cryptography 3.0, Platform Windows-10-10.0.19041-SP0
+2021-07-27 16:13:18 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.selectreactor.SelectReactor
+2021-07-27 16:13:18 [scrapy.crawler] INFO: Overridden settings:
+{'AUTOTHROTTLE_ENABLED': True,
+ 'BOT_NAME': 'scrapy_app',
+ 'CONCURRENT_REQUESTS': 64,
+ 'CONCURRENT_REQUESTS_PER_DOMAIN': 32,
+ 'CONCURRENT_REQUESTS_PER_IP': 16,
+ 'COOKIES_ENABLED': False,
+ 'DOWNLOAD_DELAY': 3,
+ 'DUPEFILTER_CLASS': 'scrapy_splash.SplashAwareDupeFilter',
+ 'HTTPCACHE_STORAGE': 'scrapy_splash.SplashAwareFSCacheStorage',
+ 'LOG_FILE': 'logs\\scrapy_app\\official_site_one\\dca2998ceeba11eb9cbc5076af11070a.log',
+ 'NEWSPIDER_MODULE': 'scrapy_app.spiders',
+ 'SPIDER_MODULES': ['scrapy_app.spiders'],
+ 'USER_AGENT': 'Mozilla/5.0 (compatible; Googlebot/2.1; '
+               '+http://www.google.com/bot.html)'}
+2021-07-27 16:13:18 [scrapy.extensions.telnet] INFO: Telnet Password: 0a10a030deb47d9d
+2021-07-27 16:13:18 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.throttle.AutoThrottle']
+2021-07-27 16:13:18 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy_app.middlewares.ScrapyAppDownloaderMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy_splash.SplashCookiesMiddleware',
+ 'scrapy_splash.SplashMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2021-07-27 16:13:18 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy_splash.SplashDeduplicateArgsMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy_app.middlewares.ScrapyAppSpiderMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2021-07-27 16:13:18 [scrapy.middleware] INFO: Enabled item pipelines:
+['scrapy_app.pipelines.MySQLOfficialSiteOnePipeline']
+2021-07-27 16:13:18 [scrapy.core.engine] INFO: Spider opened
+2021-07-27 16:13:18 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2021-07-27 16:13:18 [official_site_one] INFO: Spider opened: official_site_one
+2021-07-27 16:13:18 [official_site_one] INFO: Spider opened: official_site_one
+2021-07-27 16:13:18 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6024
+2021-07-27 16:13:18 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): serpapi.com:443
+2021-07-27 16:13:18 [urllib3.connectionpool] DEBUG: https://serpapi.com:443 "GET /search?engine=google&q=site%3Ammoga.com+game%7Cstrategy%7Csport&google_domain=google.com&start=0&num=1000&device=desktop&api_key=97b7218f612297fbedf58e2f0b94c2b6e0d3a89df602023eb5edc3a13766d3a7&output=json&source=python HTTP/1.1" 200 None
+2021-07-27 16:13:18 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): serpapi.com:443
+2021-07-27 16:13:18 [urllib3.connectionpool] DEBUG: https://serpapi.com:443 "GET /search?engine=google&q=site%3Ammoga.com+game%7Cstrategy%7Csport&google_domain=google.com&start=0&num=1000&device=desktop&api_key=97b7218f612297fbedf58e2f0b94c2b6e0d3a89df602023eb5edc3a13766d3a7&output=json&source=python HTTP/1.1" 200 None
+2021-07-27 16:13:18 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): serpapi.com:443
+2021-07-27 16:13:19 [urllib3.connectionpool] DEBUG: https://serpapi.com:443 "GET /search?engine=google&q=site%3Ammoga.com+game%7Cstrategy%7Csport&google_domain=google.com&start=0&num=1000&device=desktop&api_key=97b7218f612297fbedf58e2f0b94c2b6e0d3a89df602023eb5edc3a13766d3a7&output=json&source=python HTTP/1.1" 200 None
+2021-07-27 16:13:20 [urllib3.connectionpool] DEBUG: Starting new HTTPS connection (1): serpapi.com:443
+2021-07-27 16:13:20 [urllib3.connectionpool] DEBUG: https://serpapi.com:443 "GET /search?engine=google&q=site%3Ammoga.com+game%7Cstrategy%7Csport&google_domain=google.com&start=100&num=1000&device=desktop&api_key=97b7218f612297fbedf58e2f0b94c2b6e0d3a89df602023eb5edc3a13766d3a7&output=json&source=python HTTP/1.1" 200 None
+2021-07-27 16:13:21 [py.warnings] WARNING: c:\users\tripl\anaconda3\envs\pw\lib\site-packages\scrapy_splash\request.py:41: ScrapyDeprecationWarning: Call to deprecated function to_native_str. Use to_unicode instead.
+  url = to_native_str(url)
+
+2021-07-27 16:13:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mmoga.com/ via http://127.0.0.1:8050/execute> (referer: None)
+2021-07-27 16:13:29 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.mmoga.com/>
+{'domain': 'mmoga.com game|strategy|sport',
+ 'page_content': 'FIFA Coins, Buy WoW Classic Gold, Game Key Deals Suggestions '
+                 'Profile Discount Payment Help About MMOGA Categories My '
+                 'Account Forgot your password? Sign in Register Social login '
+                 'You do not have any products in your shopping cart yet. $ '
+                 'Currency Back EUR â\x82¬ USD $ GBP Â£ CHF SFr. SEK kr AUD '
+                 '$AUD CAD $CAD BRL R$ CZK Kc Language Back .de .co.uk .com '
+                 '.fr .es .se Home Keys - Skins - Cards Back BattleNet Games '
+                 'Bethesda Games Bitcoin Gift Cards EA Games Epic Store Games '
+                 'Game Keys Gamecards GOG Keys iTunes Microsoft Store PC Games '
+                 'Nintendo Playstation Network Rockstar Games Software Steam '
+                 'Games Uplay Games VR Games Xbox Live Online Games Back FIFA '
+                 'Coins FUT 21 Coins - PS4 / PS5 FUT 21 Coins - Xbox One / X|S '
+                 'FUT 21 Coins - PC World of Warcraft TBC Classic World of '
+                 'Warcraft Fortinte League of Legends Apex Legends Aion Animal '
+                 'Crossing: New Horizons ArcheAge Unchained Astellia Online '
+                 'Borderlands 3 Blade & Soul Brawl Stars Call of Duty: Black '
+                 'Ops 4 Call of Duty: Black Ops Cold War Call of Duty: Modern '
+                 "Warfare Conqueror's Blade CSGO Skins Counter-Strike: Global "
+                 'Offensive CSR Racing 2 Destiny 2 Diablo 3 Dota 2 DC Universe '
+                 'Online Elder Scrolls Online EVE Echoes EVE Online Escape '
+                 'from Tarkov Fallout 76 Final Fantasy XIV Reborn Final '
+                 'Fantasy XV: A New Empire Forza Horizon Forza Motorsport 7 '
+                 'Grand Theft Auto V Guild Wars Guild Wars 2 Genshin Impact '
+                 'Hearthstone Lord Of The Rings Online Minecraft Monster '
+                 'Hunter World NBA 2K21 Neverwinter NFL Madden Coins NosTale '
+                 'Outriders Overwatch Path of Exile Pockeman GO Pockeman Sword '
+                 '& Shield Payday 2 PUBG Red Dead Redemption 2 Rift Rocket '
+                 'League Runescape Star Trek Online Star Wars The Old Republic '
+                 'Summoners War TERA The Division 2 Tibia Toram Online Trove '
+                 'Valorant Warframe Wolcen: Bloodtrail World of Tanks World of '
+                 'Tanks Blitz More Online Games Help WoW TBC Classic Gold Get '
+                 'the special discount price! Gold Now available! CONTINUE The '
+                 'Sims 4 - Cottage Living (DLC) Key in 5 minutes via eMail Get '
+                 'the expansion! Now available! BUY $ 47,39 $ 35,54 F1 2021 '
+                 'Key in 5 minutes via eMail Now available! Start immediately! '
+                 'BUY $ 71,10 $ 65,17 MMOGA Power Free Steam Random Key added '
+                 'to your order! Deals, Deals, Deals Gaming stuff CONTINUE '
+                 'Dungeons & Dragons - Dark Alliance Key in 5 minutes via '
+                 'eMail Bargain! Get the special discount price! BUY $ 47,39 $ '
+                 '35,54 Police Simulator - Patrol Officers Key in 5 minutes '
+                 'via eMail Bargain! Start immediately! BUY $ 23,69 $ 14,80 '
+                 'WoW TBC Classic Gold Get the special discount price! Gold '
+                 'Now available! CONTINUE The Sims 4 - Cottage Living (DLC) '
+                 'Key in 5 minutes via eMail Get the expansion! Now available! '
+                 'BUY $ 47,39 $ 35,54 1627477200 Deal Wasteland 3 - Day One '
+                 'Edition RRP $ 71,10 $ 22,51 buy Offer Countdown 274631 '
+                 'Bestseller Bitcoin Gift Card 25 Euro $ 36,73 $ 33,76 buy '
+                 'Amazing Cultivation Simulator $ 24,88 $ 13,02 buy The Sims 4 '
+                 '- Cottage Living (DLC) $ 47,39 $ 35,54 buy Dead by Daylight '
+                 '$ 23,69 $ 5,91 buy The Elder Scrolls V: Skyrim - Legendary '
+                 'Edition $ 35,54 $ 8,88 buy The Sims 4 - Seasons (DLC) $ '
+                 '47,39 $ 31,99 buy The Elder Scrolls V: Skyrim - Special '
+                 'Edition (HD Remaster) $ 47,39 $ 12,43 buy Microsoft Windows '
+                 '10 Professional OEM $ 118,50 $ 17,77 buy Bitcoin Gift Card '
+                 '10 Euro $ 16,58 $ 13,38 buy F1 2021 $ 71,10 $ 65,17 buy Days '
+                 'Gone [PC Version] $ 59,24 $ 30,80 buy Grand Theft Auto V '
+                 '(GTA 5) - Premium Online Edition $ 35,54 $ 11,84 buy '
+                 'Warhammer 40,000 Battlesector $ 40,28 $ 29,02 buy Dark Souls '
+                 '3 - Digital Deluxe Edition $ 100,71 $ 20,73 buy Euro Truck '
+                 'Simulator 2 $ 23,69 $ 7,10 buy Orcs Must Die! 3 $ 29,62 $ '
+                 '22,51 buy Dark Souls 3 $ 71,10 $ 12,43 buy Life is Strange - '
+                 'Complete Season (Episodes 1-5) $ 23,69 $ 7,10 buy Steam Game '
+                 'Card 10 EUR $ 14,21 $ 12,55 buy Windows 10 Home OEM $ 118,50 '
+                 '$ 15,39 buy New releases Tribes of Midgard - Deluxe Edition '
+                 '$ 35,53 $ 23,69 buy Tribes of Midgard $ 23,69 $ 17,77 buy '
+                 'Orcs Must Die! 3 $ 29,62 $ 22,51 buy The Sims 4 - Cottage '
+                 'Living (DLC) $ 47,39 $ 35,54 buy Warhammer 40,000 '
+                 'Battlesector $ 40,28 $ 29,02 buy Song of Farca $ 18,95 $ '
+                 '8,28 buy Cris Tales $ 35,54 $ 26,06 buy F1 2021 $ 71,10 $ '
+                 '65,17 buy F1 2021 - Deluxe Edition $ 88,87 $ 81,76 buy F1 '
+                 '2021 - Xbox One / Series X|S Download Code $ 82,95 $ 72,28 '
+                 'buy Lost At Sea $ 17,77 $ 12,43 buy Civilization VI '
+                 'Anthology $ 118,50 $ 46,21 buy Highrisers $ 16,58 $ 9,47 buy '
+                 'Total War Warhammer 2 - The Silence & The Fury (DLC) $ 11,84 '
+                 '$ 11,01 buy F1 2021 - Deluxe Edition (Xbox One / Series X|S '
+                 'Download Code) $ 100,72 buy Worms Rumble - Nintendo Switch '
+                 'Download Code $ 17,77 $ 15,39 buy Monster Hunter Stories 2 - '
+                 'Wings of Ruin $ 71,10 $ 43,84 buy Monster Hunter Stories 2 - '
+                 'Wings of Ruin (Deluxe Edition) $ 84,42 $ 55,69 buy Black '
+                 'Skylands $ 20,14 $ 5,91 buy Fortnite - Magma Masters Pack '
+                 'DLC (Xbox One / Series X|S) - EU Key $ 17,77 $ 17,65 buy Top '
+                 'PoE Items New Items Exalted Orb x10 (Expedition Standar... $ '
+                 '43,20 buy Exalted Orb x20 (Expedition Standar... $ 88,00 buy '
+                 'Chaos Orb x500 (Expedition Standard... $ 30,69 buy Chaos Orb '
+                 'x200 (Expedition Standard... $ 12,89 buy Exalted Orb x5 '
+                 '(Expedition Standard... $ 22,40 buy Chaos Orb x1000 '
+                 '(Expedition Standar... $ 59,20 buy Gold, Coins and Platin '
+                 'show new products FUT Coins - PS4 / PS5 from $ 2,36 FUT '
+                 'Coins - PC from $ 2,36 FUT Coins - Xbox One / X|S from $ '
+                 '2,36 WoW Gold from $ 10,65 FF 14 Gil from $ 2,36 SWTOR '
+                 'Credits from $ 2,36 Preorder highlights The Guild 3 $ 35,54 '
+                 '$ 30,80 buy Dying Light 2 $ 71,10 $ 51,54 buy Total War '
+                 'Warhammer 3 $ 71,10 $ 49,76 buy Battlefield 2042 $ 71,10 $ '
+                 '58,06 buy Far Cry 6 $ 71,10 $ 61,62 buy The Ascent $ 35,54 $ '
+                 '25,47 buy Farming Simulator 22 $ 47,39 $ 41,47 buy Humankind '
+                 '(EU Key) $ 59,24 $ 39,10 buy Dying Light 2 - Deluxe Edition '
+                 '$ 94,80 $ 65,17 buy Beyond Good and Evil 2 $ 71,10 buy '
+                 'Vampire The Masquerade - Bloodlines 2 $ 71,10 buy '
+                 'Battlefield 2042 - Gold Edition $ 106,65 $ 103,09 buy Truck '
+                 '& Logistics Simulator $ 35,54 buy Battlefield 2042 - '
+                 'Ultimate Edition $ 130,35 $ 126,80 buy WRC 10 - FIA World '
+                 'Rally Championship $ 59,24 $ 34,36 buy Tribes of Midgard - '
+                 'Deluxe Edition $ 35,53 $ 23,69 buy Tales of Arise - Ultimate '
+                 'Edition $ 106,65 $ 82,95 buy The Great Ace Attorney '
+                 'Chronicles $ 47,39 $ 35,54 buy Tribes of Midgard $ 23,69 $ '
+                 '17,77 buy Aliens - Fireteam Elite $ 47,39 $ 40,28 buy Coming '
+                 'soon 29.07. The Ascent $ 35,54 $ 25,47 buy 31.07. The Great '
+                 'Ace Attorney Chronicles $ 47,39 $ 35,54 buy 18.08. Humankind '
+                 '(EU Key) $ 59,24 $ 39,10 buy 19.08. RiMS Racing $ 59,24 $ '
+                 "33,17 buy 24.08. King's Bounty II $ 71,10 $ 40,28 buy 24.08. "
+                 "King's Bounty II - Lord's Edition $ 65,17 $ 56,87 buy 24.08. "
+                 "King's Bounty II - Duke's Edition $ 71,10 $ 61,62 buy 25.08. "
+                 'Aliens - Fireteam Elite $ 47,39 $ 40,28 buy 30.08. Hearts of '
+                 'Iron IV - No Step Back (DLC) View 02.09. WRC 10 - FIA World '
+                 'Rally Championship $ 59,24 $ 34,36 buy 04.09. Big Rumble '
+                 'Boxing - Creed Champions $ 41,47 $ 35,54 buy 10.09. Tales of '
+                 'Arise - Ultimate Edition $ 106,65 $ 82,95 buy 10.09. Tales '
+                 'of Arise $ 71,10 $ 55,69 buy 10.09. Life is Strange - True '
+                 'Colors (Deluxe Edition) $ 82,09 $ 65,17 buy 10.09. Life is '
+                 'Strange - True Colors $ 70,52 $ 50,95 buy 10.09. Tales of '
+                 'Arise - Deluxe Edition $ 94,80 $ 71,10 buy 10.09. NBA 2K22 $ '
+                 '71,10 $ 59,24 buy 14.09. Deathloop $ 71,10 $ 52,13 buy '
+                 '27.09. Total War Warhammer 3 $ 71,10 $ 49,76 buy 28.09. '
+                 'Lemnis Gate (Steam Key) $ 19,90 $ 16,58 buy MMOGA â\x88\x92 '
+                 'Products and Services MMOGA MMOGA mediates the total service '
+                 'for online games and virtual goods. No matter what you need, '
+                 'we mediate the right product. Get everything quick, safe and '
+                 'comfortable from one platform with the best prices â\x80\x93 '
+                 'MMOGA. Purchase your virtual goods from the market-leading '
+                 'mediation platform! MMOGA mediates FIFA Coins for the '
+                 'popular Ultimate Team mode of the football game, everything '
+                 'you need for the flagship MMORPG World of Warcraft, ranging '
+                 'from WoW Gold and Powerleveling to Gamecards and Keys, as '
+                 'well as lots of other products for the most popular online '
+                 'games beyond ... [More] Game Keys Here you can find a wide '
+                 'range of Game Keys for current top games, all-time classics '
+                 'and many more games. Online distribution platforms like '
+                 'Steam, Origin or uPlay make the purchase and download of '
+                 'games easier than ever before. Save yourself the walk to a '
+                 'retail store â\x80\x93 here at MMOGA you can find your Game '
+                 'Keys at favorable prices! The activation code for a '
+                 'purchased game will usually arrive at your eMail address '
+                 'within minutes and you can start the download on the '
+                 'respective platform right away. In case of a preorder, Game '
+                 '... [More] Gamecards Here you can purchase Gamecards of all '
+                 'sorts. Make sure to get Gametime Cards to extend the '
+                 'playtime in your favorite online game, ranging from World of '
+                 'Warcraft to Final Fantasy XIV A Realm Reborn or Star Wars '
+                 'The Old Republic. At MMOGA, you will find a large variety of '
+                 'Gamecards for all sorts of online games, including the most '
+                 'popular as well as lesser-known MMOs. In many free2play '
+                 'games, you can receive an upgraded status by using a '
+                 'Gamecard , granting you valuable advantages like faster '
+                 'leveling, bigger ... [More] PoE Items Path of Exile is a '
+                 'free2play fantasy MMORPG set in the dark world of Wraeclast. '
+                 'As a player, you have been exiled to this forbidding '
+                 'continent full of hostile creatures, countless dangers and '
+                 'ancient secrets. In the fashion of Diablo, you hack and slay '
+                 'through hordes of enemies that leave behind more or less '
+                 'useful equipment after their demise. Face the challenges in '
+                 'Path of Exile alone or together with other players, refine '
+                 'your skills and survive in the vicious world of Wraeclast! '
+                 'Choose from six different character classes in Path of ... '
+                 '[More] MMOGA Seller Application Affiliate About MMOGA MMOGA '
+                 'POWER Information New Products Bestseller Preorder Coming '
+                 'Soon $ Language Currency Close Update Help and service '
+                 'Contact Profile Discount Help Payment Mediation Process T&Cs '
+                 'Privacy policy Newsletter Good and fast delivery, would '
+                 'recommend Good and fast delivery, would recommend Customer '
+                 'Feedback Official APP Click here for the official MMOGA App '
+                 'Payment Follow us Copyright 2021 by MMOGA SUPPORT CENTER '
+                 'Please enable JavaScript in your browser to experience all '
+                 'the custom features of our site, including the ability to '
+                 'make a purchase. m_key:ZyjefvgE8GPporHyfgKl',
+ 'response_code': 200,
+ 'scan_time': datetime.datetime(2021, 7, 27, 16, 13, 29, 218006),
+ 'screenshot': 'screenshots/official_site//2021-07-27/www.mmoga.com_.jpeg',
+ 'timezone': 'SE Asia Standard Time',
+ 'unique_id': '174679d982d046fe9a16976d1e082500',
+ 'url': 'https://www.mmoga.com/'}
+2021-07-27 16:13:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.mmoga.com/Game-Keys/ via http://127.0.0.1:8050/execute> (referer: None)
+2021-07-27 16:13:39 [scrapy.core.scraper] DEBUG: Scraped from <200 https://www.mmoga.com/Game-Keys/>
+{'domain': 'mmoga.com game|strategy|sport',
+ 'page_content': 'Buy Game Keys, Gamecodes, Steam, Origin, uPlay - MMOGA '
+                 'Suggestions Profile Discount Payment Help About MMOGA '
+                 'Categories My Account Forgot your password? Sign in Register '
+                 'Social login You do not have any products in your shopping '
+                 'cart yet. $ Currency Back EUR â\x82¬ USD $ GBP Â£ CHF SFr. '
+                 'SEK kr AUD $AUD CAD $CAD BRL R$ CZK Kc Language Back .de '
+                 '.co.uk .com .fr .es .se Home Keys - Skins - Cards Back '
+                 'BattleNet Games Bethesda Games Bitcoin Gift Cards EA Games '
+                 'Epic Store Games Game Keys Gamecards GOG Keys iTunes '
+                 'Microsoft Store PC Games Nintendo Playstation Network '
+                 'Rockstar Games Software Steam Games Uplay Games VR Games '
+                 'Xbox Live Online Games Back FIFA Coins FUT 21 Coins - PS4 / '
+                 'PS5 FUT 21 Coins - Xbox One / X|S FUT 21 Coins - PC World of '
+                 'Warcraft TBC Classic World of Warcraft Fortinte League of '
+                 'Legends Apex Legends Aion Animal Crossing: New Horizons '
+                 'ArcheAge Unchained Astellia Online Borderlands 3 Blade & '
+                 'Soul Brawl Stars Call of Duty: Black Ops 4 Call of Duty: '
+                 "Black Ops Cold War Call of Duty: Modern Warfare Conqueror's "
+                 'Blade CSGO Skins Counter-Strike: Global Offensive CSR Racing '
+                 '2 Destiny 2 Diablo 3 Dota 2 DC Universe Online Elder Scrolls '
+                 'Online EVE Echoes EVE Online Escape from Tarkov Fallout 76 '
+                 'Final Fantasy XIV Reborn Final Fantasy XV: A New Empire '
+                 'Forza Horizon Forza Motorsport 7 Grand Theft Auto V Guild '
+                 'Wars Guild Wars 2 Genshin Impact Hearthstone Lord Of The '
+                 'Rings Online Minecraft Monster Hunter World NBA 2K21 '
+                 'Neverwinter NFL Madden Coins NosTale Outriders Overwatch '
+                 'Path of Exile Pockeman GO Pockeman Sword & Shield Payday 2 '
+                 'PUBG Red Dead Redemption 2 Rift Rocket League Runescape Star '
+                 'Trek Online Star Wars The Old Republic Summoners War TERA '
+                 'The Division 2 Tibia Toram Online Trove Valorant Warframe '
+                 'Wolcen: Bloodtrail World of Tanks World of Tanks Blitz More '
+                 'Online Games Help Home / Game Keys Game Keys Sort by Please '
+                 'select Price (low - high) Price (high - low) Name (A - Z) '
+                 'Name (Z - A) Filters Age rating All Only uncut games Genre '
+                 'All Action Action Adventure Adventure Arcade Casual Family & '
+                 'Kids Indie MMO None Racing RPG RTS Shooter Simulation '
+                 'Software Sport Strategy Manufacturer All 11 bit studios 1C '
+                 'LTD Softwares 1C Entertainment 2K Games 3D Realms 505 Games '
+                 'Activision Activision Blizzard Activision Publishing Inc. '
+                 'Aerosoft Alawar Annapurna Interactive Another Indie Anvil '
+                 'Game Studios Apple Arc System Works Asmodee Digital ASPYR '
+                 'Assemble Entertainment Astragon Astragon Software GmbH Atari '
+                 'Awe Interactive BANDAI NAMCO Entertainment Behaviour Digital '
+                 'Inc. Bethesda Softworks Bethesda Softworks (ZeniMax) Big Ben '
+                 'Interactive Bioware Black Eye Games Blizzard Bloober Team '
+                 'Bloober Team S.A., Blueside Bohemia Interactive Buka Bungie '
+                 'Capcom Capcom Europe CD Projekt Chongming Studio City '
+                 'Interactive Codemasters Coffee Stain Publishing ConcernedApe '
+                 'Croteam Crytek Crytivo Curve Digital Daedalic Entertainment '
+                 'Deep Silver Devolver Digital Disney Interactive Studios '
+                 'Dovetail Games - Fishing Dovetail Games - TSW Draw Distance '
+                 'EarthWork Games Easy Interactive B.V. egames Electronic Arts '
+                 'Epic Games Inc. EuroVideo Medien GmbH Excalibur Publishing '
+                 'Fatshark Feral Interactive FireFly Studios Focus Home '
+                 'Interactive Focus interactive Freebird Games Funcom Gamera '
+                 'Game GATO STUDIO Gearbox Publishing Gearbox Software Giants '
+                 'Software Goblinz Studio Good Shepherd Entertainment Google '
+                 'Inc. Graffiti Games HeadUp Games Hello Games Humble Bundle '
+                 'Iceberg Interactive id software Idea Factory International, '
+                 'Inc. Illwinter Game Design Imperium Interactive '
+                 'Entertainment Limited Infinity Ward IO Interactive A/S ION '
+                 'LANDS Jackbox Games, Inc. KALYPSO Kalypso Media Kasedo Games '
+                 'KillHouse Games Klabater Koch Media KOEI TECMO GAMES CO., '
+                 'LTD. Konami KRAFTON, Inc., LEGO Systems, Inc Ludeon Studios '
+                 'Matt Makes Games Inc. Merge Games Microids Microids EU '
+                 'Microsoft Midjiwan AB Mixed Realms Pte Ltd Modus Games '
+                 'Mojang Morphicon Motion Twin Motorsport Games Movie Games '
+                 'S.A. Nacon NCsoft NEOWIZ NetherRealm Studios Nexon Nintendo '
+                 'Nomad Games Nordic Games Obsidian Entertainment Other Ocean '
+                 'Group Overhype Studios Paradox Interactive Pillow Castle '
+                 'Playdead PQube Limited Private Division Quantic Dream '
+                 'Ravenscourt Raw Fury Rebellion Red Barrels Reef '
+                 'Entertainment Riot Games Robot Entertainment Rockstar Games '
+                 'Rondomedia Runic Games RyseUp Studios Saber Interactive Inc. '
+                 'SadSquare Studio SCS Software Sega SEGA Europe Ltd Skunk '
+                 'Games Slitherine Ltd. Snail Games USA Snapshot Games SNK '
+                 'CORPORATION Sony Square Enix Star Drifters Stardock '
+                 'Entertainment Strategy First Stray Fawn Studio Studio '
+                 'Wildcard Subworld SUPERHOT Team Systemic Reaction Take 2 '
+                 'Interactive Take2 Team17 Digital Ltd Techland Telltale Games '
+                 'The Behemoth THE BROTHERHOOD The Farm 51 The Fun Pimps The '
+                 'Meta The Sims Studios THQ Tobias Springer tobyfox Toplitz '
+                 'Productions Torn Banner Studios Trion Worlds, Inc. Tripwire '
+                 'Interactive Turbine Ubisoft Ubisoft GmbH Ultimate Games S.A. '
+                 'Unknown Worlds Entertainment Valve Versus Evil Warhorse '
+                 'Studios Warner Warner Bros. Interactive Whatboy Games Wired '
+                 'Productions Xbox Game Studios ZeniMax Europe Ltd. Platform '
+                 'All Battle.net Bethesda.net Epic Games GOG Microsoft Store '
+                 'Nintendo eShop Official website Origin Playstation Network '
+                 'Rockstar Steam Steam Altergift UPlay Xbox LIVE Region All BE '
+                 'CH DE only EMEA ES EU FR IT NL ROW Turkey UK US Worldwide '
+                 'System All Multi PC PC / Mac PC / PS3 PC / Xbox One PS3 / '
+                 'PS4 PS4 PS5 Switch Xbox One Xbox One/Xbox Series X|S Xbox '
+                 'Series X|S / PC XboX360 Type All Addon Beta Access DLC Full '
+                 'Game Game Compilation Gamecard License Prepaid Card Stand '
+                 'Alone Addon Value Card Voucher VR Support All No Yes Price '
+                 'limit All under â\x82¬ 5 under â\x82¬ 10 under â\x82¬ 15 '
+                 'under â\x82¬ 20 under â\x82¬ 50 under â\x82¬ 100 under '
+                 'â\x82¬ 150 under â\x82¬ 200 over â\x82¬ 200 Filter products '
+                 'Products Delivery time Price Age of Empires 4 more '
+                 'information Delivery time: Oct 28th, 2021 $ 71,10$ 55,69 buy '
+                 'Battlefield 2042 more information Delivery time: Oct 22nd, '
+                 '2021 $ 71,10$ 58,06 buy Battlefield 2042 - Gold Edition more '
+                 'information Delivery time: Oct 22nd, 2021 $ 106,65$ 103,09 '
+                 'buy Battlefield 2042 - Ultimate Edition more information '
+                 'Delivery time: Oct 22nd, 2021 $ 130,35$ 126,80 buy '
+                 'Battlefield 2042 BETA [PC] more information Delivery time: '
+                 '5-10 minutes $ 71,10$ 5,91 buy Battlefield 2042 BETA '
+                 '[Playstation 4] more information Delivery time: 5-10 minutes '
+                 '$ 11,84$ 5,91 buy Battlefield 2042 BETA [Xbox One / Series '
+                 'X|S] more information Delivery time: 5-10 minutes $ 11,84$ '
+                 '5,91 buy Cyberpunk 2077 more information Delivery time: 5-10 '
+                 'minutes $ 71,10$ 27,25 buy Cyberpunk 2077 - Xbox One '
+                 'Download Code more information Delivery time: 5-10 minutes $ '
+                 '82,95$ 56,87 buy Cyberpunk 2077 - Xbox One Download Code [EU '
+                 'Key] more information Delivery time: 5-10 minutes $ 82,95$ '
+                 '56,87 buy Cyberpunk 2077 [EU Steam Altergift] more '
+                 'information Delivery time: 5-10 minutes $ 71,10$ 67,54 buy '
+                 'Dying Light 2 more information Delivery time: Dec 7th, 2021 '
+                 '$ 71,10$ 51,54 buy Dying Light 2 - Deluxe Edition more '
+                 'information Delivery time: Dec 7th, 2021 $ 94,80$ 65,17 buy '
+                 'Elden Ring more information Delivery time: Jan 21st, 2022 $ '
+                 '71,10$ 55,10 buy Far Cry 6 more information Delivery time: '
+                 'Oct 7th, 2021 $ 71,10$ 61,62 buy FIFA 21 - Ultimate Edition '
+                 '(Xbox One Download Code) - EU Key more information Delivery '
+                 'time: 5-10 minutes $ 118,50$ 29,62 buy FIFA 21 - Xbox One '
+                 'Download Code more information Delivery time: 5-10 minutes $ '
+                 '82,95$ 20,73 buy FIFA 21 - Xbox One Download Code [EU] more '
+                 'information Delivery time: 5-10 minutes $ 82,95$ 20,73 buy '
+                 'FIFA 21 [PC - Origin Key] more information Delivery time: '
+                 '5-10 minutes $ 71,10$ 24,88 buy FIFA 21 [PC - Steam Key] '
+                 'more information Delivery time: 5-10 minutes $ 71,10$ 27,84 '
+                 'buy FIFA 22 [PC - Origin Key] more information Delivery '
+                 'time: Oct 1st, 2021 $ 71,10$ 59,24 buy Fortnite - Legendary '
+                 'Rogue Spider Knight Outfit + 2000 V-Bucks Bundle (DLC) - '
+                 'Xbox One Download Code more information Delivery time: '
+                 'Currently not available View Mass Effect - Legendary Edition '
+                 '(Steam Key) - EU more information Delivery time: Currently '
+                 'not available $ 71,10 buy Mass Effect - Legendary Edition '
+                 '(Xbox One / Series X|S Download Code) more information '
+                 'Delivery time: 5-10 minutes $ 82,95$ 61,62 buy Mass Effect - '
+                 'Legendary Edition [EN Key - English Only] more information '
+                 'Delivery time: Currently not available $ 71,10$ 58,06 buy 25 '
+                 'per page 50 per page 75 per page 100 per page 1 2 3 4 5 107 '
+                 '/ 107 Game Keys Information Here you can find a wide range '
+                 'of Game Keys for current top games, all-time classics and '
+                 'many more games. Online distribution platforms like Steam, '
+                 'Origin or uPlay make the purchase and download of games '
+                 'easier than ever before. Save yourself the walk to a retail '
+                 'store â\x80\x93 here at MMOGA you can find your Game Keys at '
+                 'favorable prices!The activation code for a purchased game '
+                 'will usually arrive at your eMail address within minutes and '
+                 'you can start the download on the respective platform right '
+                 'away. In case of a preorder, Game Keys will be ready in time '
+                 'for the release, so you will be able to preload the game. '
+                 'Buy your games comfortably, fast and at a reasonable '
+                 'price!In addition to the constant good value offers at '
+                 'MMOGA, you can regularly find deals where Game Keys are '
+                 'offered at even more reduced prices. Get the best Game Keys '
+                 'throughout all genres from us cheap, fast and safe â\x80\x93 '
+                 'shooter games like Battlefield or Call of Duty, MMORPGs, '
+                 'sports games, strategy and simulation highlights, and many, '
+                 'many more! MMOGA Seller Application Affiliate About MMOGA '
+                 'MMOGA POWER Information New Products Bestseller Preorder '
+                 'Coming Soon $ Language Currency Close Update Help and '
+                 'service Contact Profile Discount Help Payment Mediation '
+                 'Process T&Cs Privacy policy Newsletter Good and fast '
+                 'delivery, would recommend Good and fast delivery, would '
+                 'recommend Customer Feedback Official APP Click here for the '
+                 'official MMOGA App Payment Follow us Copyright 2021 by MMOGA '
+                 'SUPPORT CENTER Please enable JavaScript in your browser to '
+                 'experience all the custom features of our site, including '
+                 'the ability to make a purchase. m_key:ZyjefvgE8GPporHyfgKl',
+ 'response_code': 200,
+ 'scan_time': datetime.datetime(2021, 7, 27, 16, 13, 39, 211244),
+ 'screenshot': 'screenshots/official_site//2021-07-27/www.mmoga.com_Game-Keys_.jpeg',
+ 'timezone': 'SE Asia Standard Time',
+ 'unique_id': 'b3404ea0f9144b7fa68e87fc74294328',
+ 'url': 'https://www.mmoga.com/Game-Keys/'}
+2021-07-27 16:13:39 [scrapy.core.engine] INFO: Closing spider (finished)
+2021-07-27 16:13:39 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 2192,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/POST': 2,
+ 'downloader/response_bytes': 533063,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 20.792038,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2021, 7, 27, 9, 13, 39, 301387),
+ 'item_scraped_count': 2,
+ 'log_count/DEBUG': 12,
+ 'log_count/INFO': 12,
+ 'log_count/WARNING': 1,
+ 'response_received_count': 2,
+ 'scheduler/dequeued': 4,
+ 'scheduler/dequeued/memory': 4,
+ 'scheduler/enqueued': 4,
+ 'scheduler/enqueued/memory': 4,
+ 'splash/execute/request_count': 2,
+ 'splash/execute/response_count/200': 2,
+ 'start_time': datetime.datetime(2021, 7, 27, 9, 13, 18, 509349)}
+2021-07-27 16:13:39 [scrapy.core.engine] INFO: Spider closed (finished)

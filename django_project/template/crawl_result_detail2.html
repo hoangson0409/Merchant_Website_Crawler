@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_files %}
+{% endblock %}
+
+
+{% block title %}
+Crawl Result Detail App 2
+{% endblock %}
+
+{% block content %}
+<h1>
+<ul>
+    <li>
+        Product: {{ pw_product|upper }}
+    </li>
+    <li>
+        Merchant: [{{merchant_id}}]-{{merchant_name}}
+    </li>
+    <li>Keywords: {{keywords}} - Logic: {{keyword_logic}}</li>
+</ul>
+</h1>
+<p><b> Merchant URL scanned:</b> {{url}}</p>
+<!--<p>{{url_id}}</p>-->
+<p><b>Scanned Time:</b> {{scan_time}} (UTC Time) </p>
+<p><b>Page Content:</b> <br> {{page_content}} </p>
+<!--<p>{{ screenshot_dir }} </p>-->
+
+<!-- ScreenShots -->
+{% with image_static=screenshot_dir %}
+    <img src="{% static image_static %}" alt="My image"/>
+{% endwith %}
+
+{% endblock content %}
+
+
